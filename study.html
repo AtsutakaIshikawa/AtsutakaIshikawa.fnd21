@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Atsutaka Ishikawa Introduction[STUDY]</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="石川敦貴の自己紹介サイト">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div id="container">
+
+<header>
+<h1 id="logo"><a href="index.html"><img src="images/ATS.jpg" alt="ATSUTAKA ISHIKAWA"></a></h1>
+	<!--開閉ブロック-->
+	<div id="menubar">
+	<nav>
+	<ul>
+	<li><a href="index.html">HOME</a></li>
+	<li><a href="history.html">HISTORY</a></li>
+	<li><a href="about.html">ABOUT</a></li>
+	<li class="current"><a href="study.html">STUDY</a></li>
+	<li><a href="journey.html">JOURNEY</a></li>
+	<li><a href="game.html">GAME</a></li>
+	</ul>
+	</nav>
+	</div>
+	<!--/#menubar-->
+</header>
+
+<div id="contents">
+
+<main>
+
+<h1><span class="uline">今回の学び　ダイジェストVer</span></h1>
+
+<section>
+
+
+	<h2><span class="uline">jQuery</span></h2>
+	<p>ジョン・レシグが開発し、2006年1月にリリースした「JavaScriptのライブラリ」<br>
+		<strong>基本構文</strong><br>
+		$(“セレクタ”).メソッド(“パラメータ[引数]”);
+		<br>
+		<br>
+	
+		<strong>Pointは、セレクタに操作対象とするHTMLの要素、メソッドには処理内容を記載</strong></p>
+	
+	<br>
+	<br>
+
+
+
+<h2><span class="uline">スライドショー</span></h2>
+<p>基本の表示設定<br>
+	<strong>HTML</strong><br>
+		中略<br>
+		＜link rel="stylesheet" type="text/css" href="css/vegas.min.css" /＞<br>
+		<br>
+		＜script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script> //jQueryファイル<br>
+		＜script script type="text/javascript" src="js/vegas.min.js"></script><br>
+		＜script script type="text/javascript" src="js/function.js"></script> //Vegas2の設定用のjsファイル<br>
+		＜/head><br>
+		＜body><br>
+		＜div id="vegas"><br>
+			<br>
+		＜/div><br>
+		＜/body><br>
+		<br>
+		<br>
+
+	<strong>CSS</strong><br>
+	#vegas {<br>
+		width: 100vw;<br>
+		height: 100vh;<br>
+	}<br>
+	<br>
+	<br>
+
+	<strong>jsファイル</strong><br>
+	$(function() {<br>
+		$('#vegas').vegas({<br>
+			slides: [<br>
+				{ src: './images/vegas_sample01.jpg' },<br>
+				{ src: './images/vegas_sample02.jpg' },<br>
+				{ src: './images/vegas_sample03.jpg' },<br>
+				{ src: './images/vegas_sample04.jpg' }<br>
+			],<br>
+		});<br>
+	});<br>
+	<br>
+
+	<strong>PointはHTMLのjQueryファイル引き当て、jsファイルの「.vegas」と画像フォルダの列挙</strong></p>
+
+<br>
+<br>
+
+
+
+<h2><span class="uline">固定メニューバー</span></h2>
+<p>表示設定　例<br>
+	<strong>HTML</strong><br>
+	＜div id="header_menu">	<br>
+		＜a href="URL">ホーム</a>	<br>
+		＜a href="URL">サービス案内</a>	<br>
+		＜a href="URL">施設のご紹介</a>	<br>
+		＜a href="URL">ブログ</a>	<br>
+		＜a href="URL">採用情報</a>	<br>
+		＜/div>	<br>
+		<br>
+		<br>
+
+	<strong>CSS</strong><br>
+	#header_menu{<br>
+		display: block; <br>
+		position: fixed; /*ポジションを固定する*/<br>
+		top: 0px;　/*一番上に設置*/<br>
+		left: 0px;<br>
+		z-index: 9999;  /*どの要素よりも上にくるように*/<br>
+		background-color: rgba(110,169,36,0.78);　　/*メニューバー背景色*/<br>
+		width: 100%; /*横幅を100%に*/<br>
+		padding: 0 0;<br>
+		}<br>
+	<br>
+	<br>
+
+	<strong>PointはHTMLのメニューバー宣言と、CSSファイルの「position: fixed」</strong></p>
+
+<br>
+<br>
+
+
+
+<h2><span class="uline">ホバー（カーソルをマウス上にかざした時　※アクティブ化しない）</span></h2>
+<p>表示設定　例<br>
+	<strong>HTML</strong><br>
+	＜p>Would you like to join our quest?</p＞
+	＜button class="joinBtn">Confirm＜/button>
+
+		<br>
+
+	<strong>CSS</strong><br>
+	.joinBtn {<br>
+		width: 10em;<br>
+		height: 5ex;<br>
+		background-color: gold;<br>
+		border: 2px solid firebrick;<br>
+		border-radius: 10px;<br>
+		font-weight: bold;<br>
+		color: black;<br>
+		cursor: pointer;<br>
+	  }<br>
+	  <br>
+	  .joinBtn:hover {<br>
+		background-color: bisque;<br>
+	  }<br>
+	  
+	<br>
+	<br>
+
+	<strong>Pointは疑似クラス:hoverによるCSSでのスタイル定義</strong></p>
+
+<br>
+<br>
+
+
+
+
+
+
+<h2><span class="uline">他にやりたかったこと</span></h2>
+<ul>
+	<li><a href="">動画を背景へ埋め込み</a></li>
+	<li><a href="">かっこいい音楽を流す</a></li>
+	<li><a href="">SNSリンクの貼り付け</a></li>
+	<li><a href="">GoogleMAPの埋め込み</a></li>
+	<li><a href="">海外サイトによくある、3Dで商品を見る機能</a></li>
+	<li><a href="">等々</a></li>
+</ul>
+
+</section>
+
+
+
+
+
+</main>
+
+
+
+<ul id="footermenu">
+	<li><a href="index.html">HOME</a></li>
+	<li><a href="history.html">HISTORY</a></li>
+	<li><a href="about.html">ABOUT</a></li>
+	<li><a href="study.html">STUDY</a></li>
+	<li><a href="journey.html">JOURNEY</a></li>
+	<li><a href="game.html">GAME</a></li>
+	</ul>
+
+<!--ページの上部へ戻るボタン-->
+<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+
+</div>
+<!--/#container-->
+
+
+<!--jQueryの読み込み-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!--このテンプレート専用のスクリプト-->
+<script src="js/main.js"></script>
+
+</body>
+</html>
+
+
+
